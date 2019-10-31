@@ -3,8 +3,6 @@
 Custom version of [Tauwasser](https://github.com/Tauwasser/GBCartFlasher)'s cart flasher firmware with added support for 4MB MBC30 
 
 Requires [GBFlasher-Software](https://github.com/MrHDR/GBFlasher-Software) if you want to flash 4MB MBC30 carts
-<<<<<<< HEAD
-
 
 **Flashing the bootloader:**
 
@@ -30,5 +28,3 @@ avrdude -c USBasp -p atmega8515 -U flash:w:GBFlasher-Bootloader.hex -B 6
 - Download the [firmware](https://github.com/HDR/GBFlasher-Firmware/releases/latest/download/GBFlasher-Firmware.hex) and put it in the folder with the files you just extracted
 
 - Open command line and flash the firmware by writing "tsbloader_adv -port=com# -fop=wv -ffile=GBFlasher-Firmware.hex" (Replace # with whatever com port number the flasher shows up as in Device Manager)
-=======
->>>>>>> origin/master

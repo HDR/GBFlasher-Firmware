@@ -1,0 +1,13 @@
+name: C/C++ CI
+on:
+  schedule:
+  - cron: "*/5 * * * *"
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: make
+      run: make all 

@@ -9,14 +9,14 @@ Requires [GBFlasher-Software](https://github.com/MrHDR/GBFlasher-Software) if yo
 Raspberry Pi:
 
 ```
-sudo avrdude -p atmega8515 -C ~/avrdude_gpio.conf -c pi_1 -U lfuse:w:0x2f:m -U hfuse:w:0xda:m -B 6
+sudo avrdude -p atmega8515 -C ~/avrdude_gpio.conf -c pi_1 -U lfuse:w:0x1f:m -U hfuse:w:0xda:m -B 6
 sudo avrdude -p atmega8515 -C ~/avrdude_gpio.conf -c pi_1 -U flash:w:GBFlasher-Bootloader.hex -B 6
 ```
 
 USBISP:
 
 ```
-avrdude -c USBasp -p atmega8515 -U lfuse:w:0x2f:m -U hfuse:w:0xda:m -B 6
+avrdude -c USBasp -p atmega8515 -U lfuse:w:0x1f:m -U hfuse:w:0xda:m -B 6
 avrdude -c USBasp -p atmega8515 -U flash:w:GBFlasher-Bootloader.hex -B 6
 ```
 

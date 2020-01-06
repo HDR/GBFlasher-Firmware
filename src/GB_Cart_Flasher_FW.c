@@ -1639,18 +1639,6 @@ void send_status(void)
 
 }
 
-/**
- * Main Program Loop.
- * Setup of all ports.
- * Set USART speed depending on E0 and E2:
- * <ul><li>Short E0 to E1 for 125,000 baud</li>
- * <li>Short E2 to E1 for 375,000 baud\</li>
- * <li>Leave all three pins open for 187,500 baud.</li>
- * </ul>
- * Not acknowledges to host on unknown/unexpected packet.request.command,
- * packet.request.type, CRC error or timeout.
- * Never returns.
- */
 int main(void)
 {
 
@@ -1667,20 +1655,8 @@ int main(void)
 
 	PORTE = 0x05u;
 	DDRE = (1u << DDE1);
-
-	if ((PINE & (1u << DDE0 | 1u << DDE2)) == 0x01u) {
-
-		UBRRL = 0x02;
-
-	} else if ((PINE & (1u << DDE0 | 1u << DDE2)) == 0x04u) {
-
-		UBRRL = 0x00;
-
-	} else {
-
-		UBRRL = 0x01;
-
-	}
+	
+	UBRRL = 0x00;
 
 	DDRE = 0x00u;
 	PORTE = 0x07u;

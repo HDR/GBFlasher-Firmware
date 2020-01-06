@@ -33,7 +33,7 @@
 /**
  * Firmware Minor Version.
  */
-#define FW_VER_MIN "10"
+#define FW_VER_MIN "12"
 
 /**
  * Helper macro to convert char
